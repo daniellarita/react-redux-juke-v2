@@ -55,6 +55,7 @@ export const loadAllSongs = () => {
   return dispatch => {
     axios.get('/api/songs')
       .then(response => {
+        console.log(response,"RESPONSE")
         dispatch(receiveAllSongs(response.data));
       });
   };

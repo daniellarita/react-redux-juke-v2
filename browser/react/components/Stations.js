@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 
 const DUMMY_STATIONS_DATA = [
   { name: '90s Hip Hop' },
-  { name: 'Death Metal' },
-  { name: 'Classical' }
+  { name: 'Ambient' },
+  { name: 'Instrumental' }
 ];
 
 export default (props) => {
@@ -17,7 +17,7 @@ export default (props) => {
           DUMMY_STATIONS_DATA.map(station => {
             return (
               <div className="list-group-item" key={station.name}>
-                <Link to={'fill/me/in/later'}>{station.name}</Link>
+                <Link to={`/stations/${station.name}`}>{station.name}</Link>
               </div>
             );
           })
